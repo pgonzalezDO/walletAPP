@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import TransferForm from "./TransferForm";
 import TransferList from "./TransferList";
 
-const url = `http://localhost:8000`;
+const url = `https://walletdo.herokuapp.com/`;
 export default class Example extends Component {
     constructor(props) {
         super(props);
