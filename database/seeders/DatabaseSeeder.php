@@ -14,22 +14,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->truncateTables([
-            'wallets',
-            'transfers'
-        ]);
+        // $this->truncateTables([
+        //     'wallets',
+        //     'transfers'
+        // ]);
 
         $this->call(WalletsTableSeeder::class);
         $this->call(TransfersTableSeeder::class);
     }
 
-    public function truncateTables(array $tables)
-    {
-    	DB::statement('SET FOREIGN_KEY_CHECKS = 0; ');
-    	foreach($tables as $table)
-      {
-         DB::table($table)->truncate();
-      }            
-      DB::statement('SET FOREIGN_KEY_CHECKS = 1; ');
-    }
+    // public function truncateTables(array $tables)
+    // {
+    // 	DB::statement('SET FOREIGN_KEY_CHECKS = 0; ');
+    // 	foreach($tables as $table)
+    //   {
+    //      DB::table($table)->truncate();
+    //   }            
+    //   DB::statement('SET FOREIGN_KEY_CHECKS = 1; ');
+    // }
 }
